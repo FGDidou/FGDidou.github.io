@@ -1,0 +1,273 @@
+/* Wireframe — debug layout · dashed boxes · region labels · body.skin-wireframe */
+
+body.skin-wireframe {
+  font-family: ui-monospace, "Cascadia Code", "Consolas", monospace;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #222;
+  background-color: #ececec;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    #ddd 10px,
+    #ddd 11px
+  );
+}
+
+body.skin-wireframe * {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  animation: none !important;
+}
+
+body.skin-wireframe :focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
+
+body.skin-wireframe a {
+  color: #004488;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.skin-wireframe a:hover {
+  background: #d8e8ff;
+}
+
+body.skin-wireframe .skin-toggle {
+  font: inherit;
+  font-size: 11px;
+  padding: 4px 10px;
+  cursor: pointer;
+  border: 2px dashed #666;
+  background: #fff;
+  color: #333;
+}
+
+body.skin-wireframe .skin-toggle[aria-pressed="true"] {
+  border-style: solid;
+  background: #ccc;
+  font-weight: bold;
+}
+
+/* ——— region label helper ——— */
+body.skin-wireframe .top,
+body.skin-wireframe .tabs,
+body.skin-wireframe .toolbar,
+body.skin-wireframe .list-panel,
+body.skin-wireframe .detail-panel,
+body.skin-wireframe .eco-block,
+body.skin-wireframe #main-gov,
+body.skin-wireframe #main-eco,
+body.skin-wireframe #main-quest {
+  position: relative;
+  margin: 6px;
+  padding: 14px 10px 10px;
+  background: #f6f6f6;
+  border: 2px dashed #888;
+}
+
+body.skin-wireframe .top::before { content: "HEADER"; }
+body.skin-wireframe .tabs::before { content: "TABS"; }
+body.skin-wireframe .toolbar::before { content: "TOOLBAR"; }
+body.skin-wireframe .list-panel::before { content: "LIST"; }
+body.skin-wireframe .detail-panel::before { content: "DETAIL"; }
+body.skin-wireframe .eco-block::before { content: "ECO"; }
+body.skin-wireframe #main-gov::before { content: "MAIN · GOV"; }
+body.skin-wireframe #main-eco::before { content: "MAIN · ECO"; }
+body.skin-wireframe #main-quest::before { content: "MAIN · QUEST"; }
+
+body.skin-wireframe .top::before,
+body.skin-wireframe .tabs::before,
+body.skin-wireframe .toolbar::before,
+body.skin-wireframe .list-panel::before,
+body.skin-wireframe .detail-panel::before,
+body.skin-wireframe .eco-block::before,
+body.skin-wireframe #main-gov::before,
+body.skin-wireframe #main-eco::before,
+body.skin-wireframe #main-quest::before {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  transform: translateY(-50%);
+  padding: 0 6px;
+  background: #ececec;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #555;
+  border: 1px dashed #999;
+}
+
+body.skin-wireframe .top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+  color: #222;
+}
+
+body.skin-wireframe .top h1 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #111;
+  flex: 1 1 auto;
+}
+
+body.skin-wireframe .tag {
+  background: #ddd;
+  color: #333;
+  border: 1px dashed #888;
+  padding: 2px 6px;
+}
+
+body.skin-wireframe .sub {
+  color: #555;
+  width: 100%;
+  font-size: 11px;
+}
+
+body.skin-wireframe .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding-top: 14px;
+}
+
+body.skin-wireframe .tabs button {
+  border: 2px dashed #777;
+  background: #fff;
+  color: #222;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+body.skin-wireframe .tabs button[aria-selected="true"] {
+  border-style: solid;
+  background: #bbb;
+  color: #000;
+  font-weight: bold;
+}
+
+body.skin-wireframe .toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  color: #222;
+}
+
+body.skin-wireframe .toolbar input,
+body.skin-wireframe .toolbar select {
+  border: 2px dashed #888;
+  background: #fff;
+  padding: 4px 6px;
+}
+
+body.skin-wireframe .toolbar button {
+  border: 2px dashed #666;
+  background: #e8e8e8;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+body.skin-wireframe .toolbar button:hover {
+  background: #d0d0d0;
+}
+
+body.skin-wireframe .status {
+  color: #444;
+  font-size: 11px;
+}
+
+body.skin-wireframe .split {
+  display: grid;
+  grid-template-columns: minmax(220px, 34%) 1fr;
+  min-height: calc(100vh - 200px);
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+body.skin-wireframe .split::before {
+  display: none;
+}
+
+body.skin-wireframe #main-gov {
+  margin: 6px;
+  padding: 10px;
+  display: block;
+}
+
+body.skin-wireframe #main-gov > .list-panel,
+body.skin-wireframe #main-gov > .detail-panel {
+  margin: 4px;
+}
+
+body.skin-wireframe .list-panel h2,
+body.skin-wireframe .detail-panel h2,
+body.skin-wireframe .eco-block h2 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #444;
+  border-bottom: 1px dashed #aaa;
+  padding-bottom: 4px;
+}
+
+body.skin-wireframe .items li {
+  border-bottom: 1px dashed #bbb;
+  padding: 6px 8px;
+}
+
+body.skin-wireframe .items li:hover {
+  background: #e8e8e8;
+}
+
+body.skin-wireframe .items li.sel {
+  background: #ccc;
+  color: #000;
+  border: 2px solid #666;
+}
+
+body.skin-wireframe .preview {
+  background: #fff;
+  border: 2px dashed #888;
+  color: #111;
+  font: inherit;
+}
+
+body.skin-wireframe .editor textarea {
+  border: 2px dashed #888;
+  background: #fff;
+}
+
+body.skin-wireframe .meta {
+  border: 1px dashed #bbb;
+  padding: 6px;
+  background: #fafafa;
+}
+
+body.skin-wireframe .table th,
+body.skin-wireframe .table td {
+  border: 1px dashed #999;
+  padding: 4px 8px;
+}
+
+body.skin-wireframe .table th {
+  background: #ddd;
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.skin-wireframe,
+  body.skin-wireframe * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

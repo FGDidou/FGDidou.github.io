@@ -1,0 +1,93 @@
+/* FGDidou.github.io — default + welcome layout */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #142033;
+  background: #f4f7fa;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #1a2332;
+  color: #e8edf2;
+  border-bottom: 1px solid #2a3647;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  flex: 1 1 auto;
+}
+
+.top .sub {
+  margin: 0;
+  width: 100%;
+  font-size: 0.75rem;
+  color: #8b9aab;
+}
+
+.page {
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem 3rem;
+  min-height: calc(100vh - 72px);
+}
+
+.welcome {
+  width: min(92vw, 34rem);
+  padding: 2.5rem 2rem;
+  border: 1px solid #d8e0ea;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 1rem 2.5rem rgba(20, 32, 51, 0.08);
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #d8e0ea;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #5c6b7a;
+}
+
+.welcome h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  margin: 0 0 1rem;
+  color: #3d4f63;
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #5c6b7a;
+}
+
+.skin-random {
+  font: inherit;
+  font-size: 11px;
+  padding: 4px 10px;
+  cursor: pointer;
+  border: 2px outset #ccc;
+  background: #fff;
+  touch-action: manipulation;
+}

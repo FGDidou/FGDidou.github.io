@@ -1,0 +1,246 @@
+/* Weeb Kawaii — pastels · stickers · sakura · body.skin-weebkawai */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+body.skin-weebkawai {
+  font-family: "Nunito", "Hiragino Maru Gothic ProN", "Yu Gothic UI", "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #5c3d5e;
+  background-color: #fff5f8;
+  background-image:
+    url("/skins/sakura-petal.svg"),
+    radial-gradient(ellipse at 20% 10%, #ffe0f0 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 90%, #e8d4ff 0%, transparent 40%),
+    linear-gradient(180deg, #fff8fc 0%, #f8f0ff 100%);
+  background-size: 24px 24px, auto, auto, auto;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
+body.skin-weebkawai::before {
+  content: "♡ ようこそ · kawaii mode · 頑張ってね！ ♡";
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ff6b9d;
+  padding: 6px;
+  background: linear-gradient(90deg, #ffd6e8, #e8d4ff, #d4f0ff, #ffd6e8);
+  background-size: 200% 100%;
+  animation: weeb-shimmer 6s linear infinite;
+  border-bottom: 2px dashed #ffb3d9;
+}
+
+@keyframes weeb-shimmer {
+  to { background-position: 200% 0; }
+}
+
+body.skin-weebkawai::after {
+  content: "";
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: 32px;
+  height: 32px;
+  background: url("/skins/neko-pixel.svg") no-repeat center / contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 9999;
+  filter: drop-shadow(0 2px 4px rgba(255, 107, 157, 0.4));
+}
+
+body.skin-weebkawai .skin-toggle {
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  border: 2px solid #ffb3d9;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fff 0%, #ffe8f2 100%);
+  color: #ff6b9d;
+  padding: 5px 14px;
+  box-shadow: 0 3px 0 #ffb3d9, 0 4px 12px rgba(255, 107, 157, 0.25);
+}
+
+body.skin-weebkawai .skin-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 #ffb3d9, 0 6px 16px rgba(255, 107, 157, 0.3);
+}
+
+body.skin-weebkawai .skin-toggle[aria-pressed="true"] {
+  background: linear-gradient(180deg, #ffb3d9 0%, #ff8fb8 100%);
+  color: #fff;
+  border-color: #ff6b9d;
+}
+
+body.skin-weebkawai .skin-toggle[data-skin="weebkawai"]::before {
+  content: "✧ ";
+}
+
+body.skin-weebkawai .skin-toggle[data-skin="weebkawai"]::after {
+  content: " ✧";
+}
+
+/* ——— Grimoire ——— */
+body.skin-weebkawai .top {
+  background:
+    url("/skins/weeb-kawai-banner.png") no-repeat center top / 100% clamp(36px, 10vw, 64px),
+    linear-gradient(135deg, #ffc9e0 0%, #e8c4ff 50%, #c4e8ff 100%);
+  border: 3px solid #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 0 #ffb3d9, 0 8px 24px rgba(255, 150, 200, 0.35);
+  margin: 10px;
+  padding: clamp(32px, 8vw, 48px) 16px 14px;
+  image-rendering: pixelated;
+}
+
+body.skin-weebkawai .top h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff6b9d;
+  text-shadow: 2px 2px 0 #fff, 0 0 20px rgba(255, 107, 157, 0.3);
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+body.skin-weebkawai .top h1::before {
+  content: "♡ ";
+}
+
+body.skin-weebkawai .tag {
+  background: #fff;
+  color: #b088c8;
+  border: 2px dashed #e8c4ff;
+  border-radius: 999px;
+  animation: none;
+  font-size: 10px;
+}
+
+body.skin-weebkawai .sub {
+  color: #8a6a9a;
+  text-shadow: none;
+}
+
+body.skin-weebkawai .tabs {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 16px;
+  margin: 0 10px;
+  padding: 6px;
+  gap: 6px;
+  backdrop-filter: blur(4px);
+}
+
+body.skin-weebkawai .tabs button {
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: #fff8fc;
+  color: #9a7aaa;
+  font-weight: 600;
+  padding: 6px 12px;
+}
+
+body.skin-weebkawai .tabs button[aria-selected="true"] {
+  background: linear-gradient(180deg, #ffb3d9, #ff8fb8);
+  color: #fff;
+  border-color: #ff6b9d;
+  box-shadow: 0 2px 8px rgba(255, 107, 157, 0.35);
+}
+
+body.skin-weebkawai .toolbar {
+  background: rgba(255, 248, 252, 0.9);
+  border: 2px dashed #ffd6e8;
+  border-radius: 16px;
+  margin: 8px 10px;
+  color: #5c3d5e;
+}
+
+body.skin-weebkawai .toolbar button {
+  background: linear-gradient(180deg, #fff, #ffe8f2);
+  border: 2px solid #ffb3d9;
+  border-radius: 12px;
+  color: #ff6b9d;
+  font-weight: 700;
+  box-shadow: 0 2px 0 #ffb3d9;
+}
+
+body.skin-weebkawai .toolbar input,
+body.skin-weebkawai .toolbar select {
+  border: 2px solid #ffd6e8;
+  border-radius: 12px;
+  background: #fff;
+}
+
+body.skin-weebkawai .list-panel,
+body.skin-weebkawai .detail-panel,
+body.skin-weebkawai .eco-block {
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid #ffd6e8;
+  border-radius: 16px;
+  margin: 6px;
+  box-shadow: 0 4px 16px rgba(255, 180, 210, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+body.skin-weebkawai .list-panel h2,
+body.skin-weebkawai .detail-panel h2,
+body.skin-weebkawai .eco-block h2 {
+  background: linear-gradient(90deg, #ffd6e8, #e8d4ff);
+  color: #8a5a9a;
+  border: none;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 10px;
+}
+
+body.skin-weebkawai .list-panel h2::after,
+body.skin-weebkawai .detail-panel h2::after {
+  content: " ✧";
+  color: #ffb3d9;
+}
+
+body.skin-weebkawai .items li {
+  border-bottom: 1px dashed #ffd6e8;
+  border-radius: 8px;
+  margin: 2px 0;
+}
+
+body.skin-weebkawai .items li:hover {
+  background: #fff0f8;
+}
+
+body.skin-weebkawai .items li.sel {
+  background: linear-gradient(90deg, #ffb3d9, #e8c4ff);
+  color: #fff;
+  border-radius: 10px;
+}
+
+body.skin-weebkawai .preview {
+  background: #fffafc;
+  border: 2px dashed #ffd6e8;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+body.skin-weebkawai .status {
+  color: #b088c8;
+}
+
+body.skin-weebkawai a {
+  color: #ff6b9d;
+  font-weight: 600;
+  text-decoration: wavy underline #ffd6e8;
+}
+
+body.skin-weebkawai a:hover {
+  color: #e84a7a;
+  background: #fff0f8;
+}
+
+body.skin-weebkawai .table th,
+body.skin-weebkawai .table td {
+  border-color: #ffd6e8;
+  border-radius: 4px;
+}

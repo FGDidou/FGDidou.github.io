@@ -1,0 +1,236 @@
+/* Y2K Arena — forum · IRC · MSN · Habbo · body.skin-y2k */
+
+body.skin-y2k {
+  font-family: Tahoma, Verdana, "MS Sans Serif", Geneva, sans-serif;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #000;
+  background-color: #2a2018;
+  background-image:
+    url("/skins/irc-hash.svg"),
+    url("/skins/habbo-tile.svg");
+  background-size: 16px 16px, 64px 32px;
+  image-rendering: pixelated;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect x='7' y='0' width='2' height='16' fill='%2300ff00'/%3E%3Crect x='0' y='7' width='16' height='2' fill='%2300ff00'/%3E%3C/svg%3E") 8 8, crosshair;
+}
+
+body.skin-y2k::before {
+  content: "*** Bienvenue sur #vfg-fr · mode: +nt · topic: gouvernance agentique · tapez /help ***";
+  display: block;
+  background: #0a0a0a;
+  color: #00ff00;
+  font-family: "Courier New", "Lucida Console", monospace;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-bottom: 2px solid #003300;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: y2k-irc-scroll 28s linear infinite;
+}
+
+@keyframes y2k-irc-scroll {
+  from { text-indent: 100%; }
+  to { text-indent: -120%; }
+}
+
+body.skin-y2k::after {
+  content: "";
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  width: 32px;
+  height: 32px;
+  background: url("/skins/msn-butterfly.svg") no-repeat center / contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 9999;
+  filter: drop-shadow(1px 1px 0 #000);
+}
+
+body.skin-y2k .skin-toggle {
+  font-family: Tahoma, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  border: 2px solid;
+  border-color: #fff #333 #333 #fff;
+  background: #00cc99;
+  color: #000;
+  border-radius: 0;
+  padding: 3px 8px;
+  text-transform: uppercase;
+}
+
+body.skin-y2k .skin-toggle[aria-pressed="true"] {
+  background: #ffcc00;
+  border-color: #333 #fff #fff #333;
+}
+
+body.skin-y2k .skin-toggle[data-skin="y2k"] {
+  animation: y2k-blink 0.6s step-end infinite;
+}
+
+@keyframes y2k-blink {
+  50% { color: #ff0000; }
+}
+
+/* ——— Grimoire ——— */
+body.skin-y2k .top {
+  background:
+    url("/skins/y2k-arena-banner.png") no-repeat center top / 100% clamp(36px, 10vw, 64px),
+    linear-gradient(180deg, #4a7ebb 0%, #2d5a9e 45%, #1a3d6e 100%);
+  border: 3px outset #6b9fd4;
+  box-shadow: inset 0 1px 0 #8bb4e8;
+  margin: 6px;
+  padding: clamp(32px, 8vw, 48px) 10px 8px;
+  image-rendering: pixelated;
+}
+
+body.skin-y2k .top h1 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+body.skin-y2k .top h1::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+  background: url("/skins/msn-butterfly.svg") no-repeat center / contain;
+  image-rendering: pixelated;
+}
+
+body.skin-y2k .tag {
+  background: #ffcc00;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0;
+  animation: none;
+  font-size: 9px;
+}
+
+body.skin-y2k .sub {
+  color: #cce0ff;
+  text-shadow: none;
+  font-size: 10px;
+}
+
+body.skin-y2k .tabs {
+  background: #c0c0c0;
+  border: 2px outset #fff;
+  margin: 0 6px;
+  padding: 2px;
+}
+
+body.skin-y2k .tabs button {
+  font-size: 11px;
+  border: 2px solid;
+  border-color: #fff #808080 #808080 #fff;
+  background: #c0c0c0;
+  color: #000;
+  border-radius: 0;
+  padding: 4px 10px;
+}
+
+body.skin-y2k .tabs button[aria-selected="true"] {
+  border-color: #808080 #fff #fff #808080;
+  background: #dfdfdf;
+  color: #000;
+}
+
+body.skin-y2k .toolbar {
+  background: #ece9d8;
+  border: 2px inset #808080;
+  margin: 4px 6px;
+  color: #000;
+}
+
+body.skin-y2k .toolbar button {
+  background: #00cc99;
+  border: 2px solid;
+  border-color: #66ffcc #006644 #006644 #66ffcc;
+  color: #000;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+body.skin-y2k .toolbar input,
+body.skin-y2k .toolbar select {
+  border: 2px inset #808080;
+  border-radius: 0;
+  background: #fff;
+}
+
+body.skin-y2k .list-panel,
+body.skin-y2k .detail-panel,
+body.skin-y2k .eco-block {
+  background: #fff;
+  border: 2px solid #808080;
+  margin: 4px;
+  box-shadow: none;
+}
+
+body.skin-y2k .list-panel h2,
+body.skin-y2k .detail-panel h2,
+body.skin-y2k .eco-block h2 {
+  background: #4a7ebb;
+  color: #fff;
+  border: 1px outset #6b9fd4;
+  font-size: 11px;
+  text-align: left;
+  padding: 4px 8px;
+}
+
+body.skin-y2k .list-panel h2::before,
+body.skin-y2k .detail-panel h2::before,
+body.skin-y2k .eco-block h2::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  vertical-align: middle;
+  background: url("/skins/forum-star.svg") no-repeat center / contain;
+  image-rendering: pixelated;
+}
+
+body.skin-y2k .items li {
+  border-bottom: 1px dotted #999;
+  font-size: 11px;
+}
+
+body.skin-y2k .items li.sel {
+  background: #000080;
+  color: #fff;
+}
+
+body.skin-y2k .preview {
+  background: #0a0a0a;
+  color: #00ff00;
+  border: 2px inset #333;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+}
+
+body.skin-y2k .status {
+  color: #006600;
+  font-family: "Courier New", monospace;
+}
+
+body.skin-y2k a {
+  color: #0000ff;
+}
+
+body.skin-y2k a:visited {
+  color: #800080;
+}
+
+body.skin-y2k a:hover {
+  color: #ff0000;
+  background: #ffff00;
+}

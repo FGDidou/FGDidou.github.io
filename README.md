@@ -2,4 +2,9 @@
 
 Page d'accueil GitHub Pages — [fgdidou.github.io](https://fgdidou.github.io/).
 
-Welcome page basique (essai), déployée juin 2026 après audit hygiène profil GitHub.
+- Welcome page avec **VFG skin modes** (SSOT `FG_Grimoire/public/`)
+- Premier chargement : skin **aléatoire** parmi les 7 thèmes
+- Contrôles : cycle · 🎲 aléatoire · sans skin
+- `?skin=random` force un nouveau tirage sans persister
+
+`appId` localStorage : `fgdidou`

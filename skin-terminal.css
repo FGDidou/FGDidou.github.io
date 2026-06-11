@@ -1,0 +1,299 @@
+/* Terminal — CRT green-on-black · procedural · body.skin-terminal */
+
+body.skin-terminal {
+  font-family: "Courier New", "Lucida Console", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #00ff41;
+  background-color: #0a0a0a;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 3px,
+      rgba(0, 255, 65, 0.025) 3px,
+      rgba(0, 255, 65, 0.025) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 39px,
+      rgba(0, 255, 65, 0.02) 39px,
+      rgba(0, 255, 65, 0.02) 40px
+    ),
+    radial-gradient(ellipse at 50% 0%, rgba(0, 60, 0, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 100%, rgba(0, 40, 0, 0.2) 0%, transparent 45%);
+  cursor: text;
+}
+
+body.skin-terminal::before {
+  content: "root@vfg-grimoire:~# session active — [TAB] navigate · [ENTER] select · skin: terminal";
+  display: block;
+  background: #001a00;
+  color: #00ff41;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-bottom: 1px solid #003300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body.skin-terminal::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 2px,
+    rgba(0, 0, 0, 0.12) 2px,
+    rgba(0, 0, 0, 0.12) 4px
+  );
+}
+
+body.skin-terminal *:focus-visible {
+  outline: 2px solid #00ff41;
+  outline-offset: 2px;
+}
+
+body.skin-terminal .skin-toggle {
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: bold;
+  border: 1px solid #00ff41;
+  border-radius: 0;
+  background: #001a00;
+  color: #00ff41;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.25);
+}
+
+body.skin-terminal .skin-toggle:hover {
+  background: #003300;
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.4);
+}
+
+body.skin-terminal .skin-toggle[aria-pressed="true"] {
+  background: #00ff41;
+  color: #0a0a0a;
+  border-color: #00ff41;
+}
+
+body.skin-terminal .skin-toggle[data-skin="terminal"]::after {
+  content: "_";
+  animation: term-cursor-blink 1s step-end infinite;
+}
+
+@keyframes term-cursor-blink {
+  50% { opacity: 0; }
+}
+
+/* ——— Grimoire ——— */
+body.skin-terminal .top {
+  background: #001a00;
+  border: 1px solid #003300;
+  border-bottom: 2px solid #00ff41;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.15);
+  margin: 0;
+  padding: 10px 14px;
+}
+
+body.skin-terminal .top h1 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #00ff41;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+body.skin-terminal .top h1::before {
+  content: "> ";
+  color: #00aa33;
+}
+
+body.skin-terminal .tag {
+  background: #0a0a0a;
+  color: #00ff41;
+  border: 1px solid #00aa33;
+  border-radius: 0;
+  font-size: 10px;
+  animation: none;
+}
+
+body.skin-terminal .sub {
+  color: #00aa33;
+  text-shadow: none;
+  font-size: 11px;
+}
+
+body.skin-terminal .tabs {
+  background: #0d0d0d;
+  border: none;
+  border-bottom: 1px solid #003300;
+  margin: 0;
+  padding: 6px 10px;
+  gap: 4px;
+}
+
+body.skin-terminal .tabs button {
+  font-family: inherit;
+  font-size: 11px;
+  border: 1px solid #003300;
+  border-radius: 0;
+  background: #0a0a0a;
+  color: #00aa33;
+  padding: 5px 10px;
+}
+
+body.skin-terminal .tabs button:hover {
+  color: #00ff41;
+  border-color: #00ff41;
+}
+
+body.skin-terminal .tabs button[aria-selected="true"] {
+  background: #003300;
+  color: #00ff41;
+  border-color: #00ff41;
+  box-shadow: inset 0 0 8px rgba(0, 255, 65, 0.2);
+}
+
+body.skin-terminal .toolbar {
+  background: #0d0d0d;
+  border: none;
+  border-bottom: 1px solid #003300;
+  margin: 0;
+  color: #00ff41;
+}
+
+body.skin-terminal .toolbar button {
+  font-family: inherit;
+  background: #001a00;
+  border: 1px solid #00ff41;
+  border-radius: 0;
+  color: #00ff41;
+  font-weight: bold;
+}
+
+body.skin-terminal .toolbar button:hover {
+  background: #003300;
+}
+
+body.skin-terminal .toolbar input,
+body.skin-terminal .toolbar select {
+  font-family: inherit;
+  border: 1px solid #003300;
+  border-radius: 0;
+  background: #0a0a0a;
+  color: #00ff41;
+}
+
+body.skin-terminal .toolbar input::placeholder {
+  color: #006622;
+}
+
+body.skin-terminal .list-panel,
+body.skin-terminal .detail-panel,
+body.skin-terminal .eco-block {
+  background: #0a0a0a;
+  border: 1px solid #003300;
+  margin: 0;
+  box-shadow: none;
+}
+
+body.skin-terminal .list-panel {
+  border-right-color: #003300;
+}
+
+body.skin-terminal .list-panel h2,
+body.skin-terminal .detail-panel h2,
+body.skin-terminal .eco-block h2 {
+  background: #001a00;
+  color: #00ff41;
+  border: 1px solid #003300;
+  border-radius: 0;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: left;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+body.skin-terminal .list-panel h2::before,
+body.skin-terminal .detail-panel h2::before,
+body.skin-terminal .eco-block h2::before {
+  content: "# ";
+  color: #00aa33;
+}
+
+body.skin-terminal .items li {
+  border-bottom: 1px solid #001a00;
+  font-size: 12px;
+  color: #00aa33;
+}
+
+body.skin-terminal .items li:hover {
+  background: #001a00;
+  color: #00ff41;
+}
+
+body.skin-terminal .items li.sel {
+  background: #003300;
+  color: #00ff41;
+  border-left: 3px solid #00ff41;
+}
+
+body.skin-terminal .preview {
+  background: #050505;
+  color: #00ff41;
+  border: 1px solid #003300;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+body.skin-terminal .editor textarea {
+  font-family: inherit;
+  background: #050505;
+  color: #00ff41;
+  border: 1px solid #003300;
+}
+
+body.skin-terminal .status {
+  color: #00aa33;
+  font-family: inherit;
+}
+
+body.skin-terminal a {
+  color: #00ff41;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.skin-terminal a:hover {
+  color: #0a0a0a;
+  background: #00ff41;
+}
+
+body.skin-terminal .table th,
+body.skin-terminal .table td {
+  border-color: #003300;
+  color: #00ff41;
+}
+
+body.skin-terminal .table th {
+  background: #001a00;
+}
+
+body.skin-terminal .up {
+  color: #00ff41;
+}
+
+body.skin-terminal .down {
+  color: #ff3333;
+}

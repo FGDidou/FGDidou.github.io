@@ -1,0 +1,46 @@
+/* Welcome card overrides per VFG skin — scoped body.skin-* */
+
+body.skin-skyblog .welcome {
+  border: 4px ridge #ff00aa;
+  box-shadow: 4px 4px 0 #660066;
+  background: #fff;
+}
+
+body.skin-y2k .welcome {
+  border: 3px inset #00ff00;
+  background: #0a0a12;
+  color: #00ff00;
+  box-shadow: 0 0 12px rgba(0, 255, 0, 0.35);
+}
+
+body.skin-weebkawai .welcome {
+  border: 3px solid #ffb7d5;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+body.skin-brutaliste .welcome {
+  border: 4px solid #000;
+  border-radius: 0;
+  box-shadow: 8px 8px 0 #000;
+}
+
+body.skin-terminal .welcome {
+  border: 1px solid #33ff66;
+  background: #0d1110;
+  color: #33ff66;
+  font-family: "Courier New", ui-monospace, monospace;
+  box-shadow: 0 0 8px rgba(51, 255, 102, 0.25);
+}
+
+body.skin-candy-chaos .welcome {
+  border: 3px dashed hsl(var(--cc-accent-h, 286) 80% 55%);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+body.skin-wireframe .welcome {
+  border: 2px dashed #f0f;
+  background: rgba(255, 255, 255, 0.85);
+  outline: 2px dashed #0af;
+  outline-offset: 6px;
+}

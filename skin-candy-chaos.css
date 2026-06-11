@@ -1,0 +1,351 @@
+/* Candy Chaos — procedural HSL candy clash · modern grid layout · body.skin-candy-chaos */
+
+body.skin-candy-chaos {
+  --cc-h1: 8;
+  --cc-h2: 52;
+  --cc-h3: 142;
+  --cc-h4: 208;
+  --cc-h5: 286;
+  --cc-h6: 334;
+  --cc-accent-h: 8;
+  --cc-bg: hsl(var(--cc-h5) 88% 93%);
+  --cc-fg: hsl(var(--cc-h2) 55% 14%);
+  --cc-a: hsl(var(--cc-accent-h) 100% 48%);
+  --cc-b: hsl(var(--cc-h3) 100% 40%);
+  --cc-c: hsl(var(--cc-h4) 95% 52%);
+  --cc-d: hsl(var(--cc-h6) 100% 58%);
+  --cc-e: hsl(var(--cc-h1) 95% 55%);
+  --cc-border: hsl(var(--cc-h1) 85% 32%);
+  --cc-panel: hsl(0 0% 100% / 0.92);
+  --cc-touch: 44px;
+
+  font-family: system-ui, "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--cc-fg);
+  background-color: var(--cc-bg);
+  background-image:
+    url("/skins/candy-confetti.svg"),
+    linear-gradient(135deg, hsl(var(--cc-h6) 90% 88%) 0%, transparent 40%),
+    linear-gradient(225deg, hsl(var(--cc-h3) 85% 85%) 0%, transparent 35%),
+    linear-gradient(45deg, hsl(var(--cc-h4) 80% 90%) 0%, transparent 30%);
+  background-size: 32px 32px, auto, auto, auto;
+}
+
+body.skin-candy-chaos::before {
+  content: "🍬 CANDY CHAOS — couleurs procédurales · grille · gros boutons · bordures nettes 🍬";
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: hsl(0 0% 100%);
+  padding: 8px 10px;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--cc-h1) 100% 50%),
+    hsl(var(--cc-h3) 100% 45%),
+    hsl(var(--cc-h4) 100% 50%),
+    hsl(var(--cc-h6) 100% 55%),
+    hsl(var(--cc-h1) 100% 50%)
+  );
+  background-size: 300% 100%;
+  animation: cc-stripe 8s linear infinite;
+  border-bottom: 3px solid var(--cc-border);
+}
+
+@keyframes cc-stripe {
+  to { background-position: 300% 0; }
+}
+
+body.skin-candy-chaos .skin-toggle {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  min-height: var(--cc-touch);
+  min-width: 7rem;
+  padding: 8px 16px;
+  border: 3px solid var(--cc-border);
+  border-radius: 10px;
+  background: hsl(var(--cc-h6) 100% 75%);
+  color: var(--cc-fg);
+  box-shadow: 3px 3px 0 var(--cc-a);
+}
+
+body.skin-candy-chaos .skin-toggle:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--cc-b);
+}
+
+body.skin-candy-chaos .skin-toggle[aria-pressed="true"] {
+  background: var(--cc-a);
+  color: hsl(0 0% 100%);
+  border-color: hsl(var(--cc-accent-h) 80% 30%);
+}
+
+body.skin-candy-chaos .skin-toggle[data-skin="candy-chaos"] {
+  background: linear-gradient(135deg, var(--cc-d), var(--cc-c), var(--cc-b));
+  color: hsl(0 0% 100%);
+  text-shadow: 0 1px 2px hsl(0 0% 0% / 0.3);
+}
+
+/* ——— Grimoire ——— */
+body.skin-candy-chaos .top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 8px 12px;
+  align-items: center;
+  margin: 10px;
+  padding: 16px;
+  background: var(--cc-panel);
+  border: 3px solid var(--cc-border);
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 var(--cc-c), 8px 8px 0 var(--cc-d);
+}
+
+body.skin-candy-chaos .top h1 {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--cc-a);
+  text-shadow: 2px 2px 0 var(--cc-d);
+}
+
+body.skin-candy-chaos .top .skin-controls {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  margin-left: 0;
+}
+
+body.skin-candy-chaos .tag {
+  background: var(--cc-b);
+  color: hsl(0 0% 100%);
+  border: 2px solid var(--cc-border);
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+body.skin-candy-chaos .sub {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0;
+  color: hsl(var(--cc-h4) 60% 28%);
+  font-size: 13px;
+}
+
+body.skin-candy-chaos .tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+  gap: 6px;
+  margin: 0 10px;
+  padding: 8px;
+  background: hsl(var(--cc-h4) 70% 88%);
+  border: 3px solid var(--cc-border);
+  border-radius: 10px;
+}
+
+body.skin-candy-chaos .tabs button {
+  min-height: var(--cc-touch);
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 2px solid var(--cc-border);
+  border-radius: 8px;
+  background: hsl(0 0% 100%);
+  color: var(--cc-fg);
+  cursor: pointer;
+}
+
+body.skin-candy-chaos .tabs button[aria-selected="true"] {
+  background: var(--cc-a);
+  color: hsl(0 0% 100%);
+  border-color: hsl(var(--cc-accent-h) 70% 28%);
+  box-shadow: inset 0 -3px 0 hsl(0 0% 0% / 0.15);
+}
+
+body.skin-candy-chaos .toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 10px;
+  align-items: center;
+  margin: 8px 10px;
+  padding: 12px;
+  background: hsl(var(--cc-h2) 80% 88%);
+  border: 3px solid var(--cc-border);
+  border-radius: 10px;
+  box-shadow: 0 4px 0 var(--cc-e);
+}
+
+body.skin-candy-chaos .toolbar label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+body.skin-candy-chaos .toolbar input,
+body.skin-candy-chaos .toolbar select {
+  min-height: var(--cc-touch);
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 14px;
+  border: 2px solid var(--cc-border);
+  border-radius: 8px;
+  background: hsl(0 0% 100%);
+}
+
+body.skin-candy-chaos .toolbar button {
+  min-height: var(--cc-touch);
+  padding: 10px 18px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  border: 2px solid var(--cc-border);
+  border-radius: 8px;
+  background: var(--cc-d);
+  color: var(--cc-fg);
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--cc-border);
+}
+
+body.skin-candy-chaos .toolbar button:hover {
+  background: var(--cc-c);
+}
+
+body.skin-candy-chaos .status {
+  grid-column: 1 / -1;
+  font-size: 13px;
+  font-weight: 600;
+  color: hsl(var(--cc-h1) 70% 30%);
+}
+
+body.skin-candy-chaos .split {
+  display: grid;
+  grid-template-columns: minmax(240px, 36%) 1fr;
+  gap: 0;
+  margin: 0 10px 10px;
+  border: 3px solid var(--cc-border);
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: min(calc(100vh - 220px), 70vh);
+  background: var(--cc-panel);
+}
+
+@media (max-width: 720px) {
+  body.skin-candy-chaos .split {
+    grid-template-columns: 1fr;
+  }
+}
+
+body.skin-candy-chaos .list-panel,
+body.skin-candy-chaos .detail-panel,
+body.skin-candy-chaos .eco-block {
+  padding: 14px;
+  border: none;
+  background: transparent;
+}
+
+body.skin-candy-chaos .list-panel {
+  border-right: 3px solid var(--cc-border);
+  background: hsl(var(--cc-h6) 60% 95%);
+}
+
+body.skin-candy-chaos .list-panel h2,
+body.skin-candy-chaos .detail-panel h2,
+body.skin-candy-chaos .eco-block h2 {
+  margin: 0 0 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: hsl(0 0% 100%);
+  background: linear-gradient(90deg, var(--cc-a), var(--cc-b), var(--cc-c));
+  border: 2px solid var(--cc-border);
+  border-radius: 8px;
+}
+
+body.skin-candy-chaos .items li {
+  min-height: var(--cc-touch);
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  margin-bottom: 4px;
+  border: 2px solid hsl(var(--cc-h4) 50% 75%);
+  border-radius: 8px;
+  background: hsl(0 0% 100%);
+  cursor: pointer;
+}
+
+body.skin-candy-chaos .items li:hover {
+  border-color: var(--cc-c);
+  background: hsl(var(--cc-h4) 70% 95%);
+}
+
+body.skin-candy-chaos .items li.sel {
+  background: var(--cc-a);
+  color: hsl(0 0% 100%);
+  border-color: hsl(var(--cc-accent-h) 70% 28%);
+  font-weight: 700;
+}
+
+body.skin-candy-chaos .preview {
+  border: 3px solid var(--cc-border);
+  border-radius: 10px;
+  padding: 12px;
+  background: hsl(0 0% 100%);
+  font-size: 13px;
+}
+
+body.skin-candy-chaos .eco {
+  margin: 0 10px 10px;
+}
+
+body.skin-candy-chaos .eco-block {
+  border: 3px solid var(--cc-border);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: var(--cc-panel);
+  box-shadow: 3px 3px 0 var(--cc-d);
+}
+
+body.skin-candy-chaos a {
+  color: hsl(var(--cc-h4) 90% 35%);
+  font-weight: 700;
+  text-decoration: underline 2px var(--cc-d);
+}
+
+body.skin-candy-chaos a:hover {
+  color: var(--cc-a);
+  background: hsl(var(--cc-h6) 80% 92%);
+}
+
+body.skin-candy-chaos .table th,
+body.skin-candy-chaos .table td {
+  border: 2px solid var(--cc-border);
+  padding: 8px 10px;
+}
+
+body.skin-candy-chaos .table th {
+  background: hsl(var(--cc-h2) 70% 82%);
+  font-weight: 700;
+}
+
+body.skin-candy-chaos .up {
+  color: hsl(var(--cc-h3) 80% 28%);
+  font-weight: 700;
+}
+
+body.skin-candy-chaos .down {
+  color: hsl(var(--cc-h1) 80% 38%);
+  font-weight: 700;
+}

@@ -3,19 +3,46 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Page d'accueil FG — essai GitHub Pages">
+    <meta name="description" content="FG — welcome page · VFG skin modes">
     <title>FG — Welcome</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/skin-skyblog.css">
+    <link rel="stylesheet" href="/skin-y2k.css">
+    <link rel="stylesheet" href="/skin-weebkawai.css">
+    <link rel="stylesheet" href="/skin-brutaliste.css">
+    <link rel="stylesheet" href="/skin-terminal.css">
+    <link rel="stylesheet" href="/skin-candy-chaos.css">
+    <link rel="stylesheet" href="/skin-wireframe.css">
+    <link rel="stylesheet" href="/skin-welcome.css">
 </head>
 <body>
-    <main class="welcome">
-        <p class="badge">GitHub Pages · essai</p>
-        <h1>Bienvenue</h1>
-        <p class="lead">
-            Page d'accueil basique pour <strong>fgdidou.github.io</strong>.
-            Remplace l'ancien compte à rebours « Coming Soon ».
-        </p>
-        <p class="meta">FG · juin 2026</p>
-    </main>
+    <script>(function(){var i="fgdidou",m,c={skyblog:"skin-skyblog",y2k:"skin-y2k",weebkawai:"skin-weebkawai",brutaliste:"skin-brutaliste",terminal:"skin-terminal","candy-chaos":"skin-candy-chaos",wireframe:"skin-wireframe"},pool=Object.keys(c),params=new URLSearchParams(location.search);if(params.get("skin")==="random"){m=pool[Math.floor(Math.random()*pool.length)]}else{try{m=localStorage.getItem("vfg-skin-mode:"+i)}catch(e){}if(!m)try{if(localStorage.getItem("vfg-skin-skyblog:"+i)==="1")m="skyblog"}catch(e){}if(!m){m=pool[Math.floor(Math.random()*pool.length)];try{localStorage.setItem("vfg-skin-mode:"+i,m)}catch(e){}}}if(m&&c[m]){document.body.classList.add(c[m]);document.body.dataset.skin=m}})();</script>
+
+    <header class="top">
+        <h1>fgdidou.github.io</h1>
+        <p class="sub">Welcome · mode design skin random</p>
+        <div class="skin-controls" role="group" aria-label="Skins UI">
+            <button type="button" id="skin-disable" class="skin-disable" title="Désactiver le skin">Sans skin</button>
+            <button type="button" id="skin-random" class="skin-random" title="Skin aléatoire">🎲 Aléatoire</button>
+            <button type="button" id="skin-toggle" class="skin-toggle" aria-pressed="false" title="Changer de skin">Skin: Normal</button>
+        </div>
+    </header>
+
+    <div class="page">
+        <main class="welcome">
+            <p class="badge">GitHub Pages · VFG skins</p>
+            <h2>Bienvenue</h2>
+            <p class="lead">
+                Page d'essai avec les skins VFG. Premier chargement = skin aléatoire.
+                Cycle manuel, bouton 🎲, ou <code>?skin=random</code> à chaque visite.
+            </p>
+            <p class="meta">FG · juin 2026</p>
+        </main>
+    </div>
+
+    <script type="module">
+        import { initSkinToggle } from "./skin-toggle.js";
+        initSkinToggle("fgdidou");
+    </script>
 </body>
 </html>

@@ -1,0 +1,230 @@
+/* FG_Grimoire — skin Skyblog (MODE-SKYBLOG.md) · body.skin-skyblog */
+
+.skin-controls {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.skin-disable {
+  font: inherit;
+  font-size: 10px;
+  padding: 4px 8px;
+  cursor: pointer;
+  border: 1px solid #999;
+  background: #f0f0f0;
+  border-radius: 4px;
+  color: #444;
+}
+
+.skin-disable:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.skin-toggle {
+  font: inherit;
+  font-size: 11px;
+  padding: 4px 10px;
+  cursor: pointer;
+  border: 2px outset #ccc;
+  background: #fff;
+  border-radius: 0;
+}
+
+.skin-toggle[aria-pressed="true"] {
+  background: #ffff00;
+  border-color: #ff00aa;
+  font-weight: bold;
+}
+
+body.skin-skyblog {
+  font-family: "Comic Sans MS", "Chalkboard SE", "Trebuchet MS", sans-serif;
+  font-size: 13px;
+  color: #222;
+  background: #ffb6e6 url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='3' cy='3' r='1' fill='%23ff88cc'/%3E%3Ccircle cx='13' cy='11' r='1' fill='%23cc88ff'/%3E%3C/svg%3E") repeat;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='24'%3E%3Ctext y='16' font-size='14'%3E✨%3C/text%3E%3C/svg%3E"), auto;
+}
+
+body.skin-skyblog a {
+  color: #0000ff;
+  font-weight: bold;
+}
+
+body.skin-skyblog a:hover {
+  color: #ff00ff;
+  background: #ffff00;
+}
+
+body.skin-skyblog .top {
+  background: linear-gradient(90deg, #ff0066, #ffcc00, #00ff00, #00ccff, #ff0066);
+  background-size: 200% 100%;
+  animation: grimoire-rainbow-bg 4s linear infinite;
+  border-bottom: 5px double #fff;
+  box-shadow: 4px 4px 0 #660066;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+@keyframes grimoire-rainbow-bg {
+  to { background-position: 200% 0; }
+}
+
+body.skin-skyblog .top h1 {
+  font-family: "Impact", "Arial Black", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #ff00ff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  flex: 1 1 auto;
+}
+
+body.skin-skyblog .tag {
+  background: #ff00aa;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0;
+  animation: grimoire-blink 0.9s step-end infinite;
+}
+
+@keyframes grimoire-blink {
+  50% { visibility: hidden; }
+}
+
+body.skin-skyblog .sub {
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  width: 100%;
+}
+
+body.skin-skyblog .skin-toggle {
+  border: 3px ridge #fff;
+  background: #111;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+}
+
+body.skin-skyblog .skin-toggle[aria-pressed="true"] {
+  background: #ffff00;
+  color: #cc0066;
+}
+
+body.skin-skyblog .tabs {
+  background: #000;
+  border-bottom: 3px ridge #888;
+}
+
+body.skin-skyblog .tabs button {
+  font-family: "Comic Sans MS", sans-serif;
+  border: 2px outset #ff99dd;
+  border-radius: 0;
+  background: #ffe6f5;
+  color: #660066;
+}
+
+body.skin-skyblog .tabs button[aria-selected="true"] {
+  background: #ff00aa;
+  color: #fff;
+  border-color: #fff;
+  font-weight: bold;
+}
+
+body.skin-skyblog .toolbar {
+  background: linear-gradient(#4a7ebb, #2d5a9e);
+  color: #fff;
+  border-bottom: 2px outset #6b9fd4;
+}
+
+body.skin-skyblog .toolbar label,
+body.skin-skyblog .toolbar button {
+  color: inherit;
+}
+
+body.skin-skyblog .toolbar input,
+body.skin-skyblog .toolbar select,
+body.skin-skyblog .toolbar button {
+  border: 2px inset #ccc;
+  border-radius: 0;
+  font-family: inherit;
+}
+
+body.skin-skyblog .toolbar button {
+  background: #ffff99;
+  color: #000;
+  border-style: outset;
+  font-weight: bold;
+}
+
+body.skin-skyblog .status {
+  color: #7fff7f;
+  font-family: "Courier New", monospace;
+}
+
+body.skin-skyblog .list-panel {
+  background: #fffafa;
+  border-right: 4px groove #ff99dd;
+}
+
+body.skin-skyblog .detail-panel,
+body.skin-skyblog .eco-block {
+  background: #fff;
+  border: 4px groove #ff99dd;
+  box-shadow: inset 2px 2px 6px #ffe0f0;
+}
+
+body.skin-skyblog .list-panel h2,
+body.skin-skyblog .detail-panel h2,
+body.skin-skyblog .eco-block h2 {
+  font-size: 12px;
+  color: #cc0066;
+  background: #ffe6f5;
+  border: 1px solid #ff99cc;
+  padding: 3px 6px;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+body.skin-skyblog .items li {
+  border-bottom: 1px dotted #ff99cc;
+}
+
+body.skin-skyblog .items li:hover {
+  background: #ffff99;
+}
+
+body.skin-skyblog .items li.sel {
+  background: #ff00aa;
+  color: #fff;
+}
+
+body.skin-skyblog .preview {
+  background: #fffff0;
+  border: 2px inset #999;
+  font-family: "Courier New", monospace;
+}
+
+body.skin-skyblog .editor textarea {
+  border: 2px inset #999;
+  background: #fff;
+}
+
+body.skin-skyblog .table th,
+body.skin-skyblog .table td {
+  border: 1px solid #ffccdd;
+}
+
+body.skin-skyblog .up {
+  color: #060;
+  font-weight: bold;
+}
+
+body.skin-skyblog .down {
+  color: #c00;
+  font-weight: bold;
+}
